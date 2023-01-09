@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
+
+:root {
+  --main-color: #363230;
+  --sub-color: #ffff;
+  --btn-color: #ffdd0d;
+}
+
+.ir {
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 280px 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+
+#container .img-header {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-header .img-logo {
+  width: 100%;
+}
+
+#container .wrap-hamberger-vend,
+#container .my-info-wrap {
+  flex-basis: 374px;
+  background-color: var(--sub-color);
+}
+
+#container wrap-hamberger-ven {
+  padding: 31px 27px 28px;
+}
+
+/* 햄버거 리스트 */
+.wrap-hamberger-vend .hamberger-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.wrap-hamberger-vend .hamberger-list li {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wrap-hamberger-vend .hamberger-list li.sold-out {
+  pointer-events: none;
+}
+
+.wrap-hamberger-vend .hamberger-list li.sold-out::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: no-repeat center/60px 46px url(../images/Sold-out.png)
+    rgba(0, 0, 0, 0.8);
+}
+
+.wrap-hamberger-vend .hamberger-list .btn-item {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 11px 12px 9px;
+}
+
+.wrap-hamberger-vend .hamberger-list .btn-item:active {
+  border-radius: 10px;
+  outline: 3px solid #6327fe;
+}
+
+.hamberger-list .btn-item .btn-price {
+  display: block;
+  padding: 5px 15px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  background-color: #6327fe;
+  border-radius: 50px;
+}
+
+.hamberger-list .btn-item .img-item {
+  width: 36px;
+  height: 65px;
+}
+
+.hamberger-list .btn-item .txt-item {
+  display: block;
+  margin: 6px 0 7px;
+}
+
+/* 햄버거 버튼 */
+
+.wrap-hamberger-vend .hamberger-list {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.info-wrap .input-money,
+.info-wrap .btn-money,
+.info-wrap .sub-btn,
+.info-wrap .take-my-hamberger,
+.info-wrap .hambuger-take-list {
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.info-wrap .change-money {
+  padding: 6px 10px;
+  line-height: 20px;
+  color: var();
+  background-color: var(--main-color);
+}
+
+.info-wrap .change-txt {
+  float: right;
+}
+
+.info-wrap .input-money {
+  padding: 7px 6px;
+}
+
+.info-wrap .input-money::placeholder {
+  color: #bdbdbd;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+
+.info-wrap .btn-money,
+.info-wrap .sub-btn,
+.info-wrap .take-my-hamberger {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-wrap .take-my-hamberger {
+  background-color: var(--btn-color);
+  color: #ffff;
+}
+
+/* 획득 리스트 */
+
+.hambuger-take-list {
+  height: 106px;
+  overflow-y: scroll;
+  padding: 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: #ffff;
+}
+
+.hambuger-take-list {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.hambuger-take-list {
+  margin-top: 6px;
+}
+
+.hambuger-take-list button {
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 100%;
+}
+
+.hambuger-take-list .img-item,
+.hambuger-take-list .txt-item {
+  float: left;
+}
+
+.hambuger-take-list .img-item {
+  width: 18px;
+  height: 33px;
+}
+.hambuger-take-list .txt-item {
+  margin-left: 10px;
+  line-height: 33px;
+}
+
+.hambuger-take-list .num-counter {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  width: 30px;
+  height: 30px;
+  line-height: 14px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.hambuger-take-list::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--main-color);
+}
+
+.hambuger-take-list::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
+  background-clip: padding-box;
+}
+#container .my-info-wrap {
+  background-color: transparent;
+}
+
+.my-info-wrap .moeny-wrap {
+  padding: 9px 27px;
+  background-color: #ffff;
+}
+
+.moeny-wrap .money-wrap-tit {
+  padding: 6px 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.money-wrap-tit #money {
+  float: right;
+  font-weight: 700;
+}
+
+.get-hamberger-wrap {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 25px 27px;
+}
+.get-hamberger-wrap .tit-get-hamberger {
+  display: block;
+  font-size: 14px;
+  font-weight: 700px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.get-hamberger-wrap .hambuger-take-list {
+  height: 370px;
+}
+.get-hamberger-wrap .total-pri {
+  display: block;
+  margin-top: 6px;
+  text-align: right;
+  font-size: 12px;
+  line-height: 17px;
+  float: right;
+}

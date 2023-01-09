@@ -1,0 +1,38 @@
+[
+  {
+    "name": "BulgogiBurger",
+    "cost": 1000,
+    "img": "BulgogiBurger.jpg",
+    "count": 10
+  },
+  {
+    "name": "CheezBuger",
+    "cost": 1000,
+    "img": "CheezBuger.jpg",
+    "count": 10
+  },
+  {
+    "name": "MacSpicyBuger",
+    "cost": 1000,
+    "img": "MacSpicyBuger.jpg",
+    "count": 10
+  },
+  {
+    "name": "BaconTomatoBuger",
+    "cost": 1000,
+    "img": "BaconTomatoBuger.jpg",
+    "count": 10
+  },
+  {
+    "name": "subiBuger.jpg",
+    "cost": 3500,
+    "img": "subiBuger.jpg",
+    "count": 10
+  },
+  {
+    "name": "MacMorninBuger",
+    "cost": 4500,
+    "img": "MacMorninBuger.jpg",
+    "count": 10
+  }
+]
