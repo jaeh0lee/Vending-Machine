@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
-
 :root {
   --main-color: #363230;
   --sub-color: #ffff;
+  --sub2-color: #ff0000;
+  --sub3-color: #000000;
   --btn-color: #ffdd0d;
 }
 
@@ -22,262 +22,231 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
-  padding: 280px 0;
+  gap: 0 28px;
+  padding: 260px 0;
+  padding-right: 25px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
 }
 
-#container .img-header {
+/* 이미지 헤더 */
+#container .img-header .img-logo {
   position: absolute;
   width: 200px;
-  top: 0;
+  height: 200px;
+  margin: 0 auto;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.img-header .img-logo {
-  width: 100%;
+/* 칸 두개로 나누기 */
+#container .vending-wrap,
+#container .info-wrap {
+  flex-basis: 400px;
 }
 
-#container .wrap-hamberger-vend,
-#container .my-info-wrap {
-  flex-basis: 374px;
+/* 자판기 꾸미기  */
+
+#container .vending-wrap {
+  padding: 30px;
   background-color: var(--sub-color);
+  border-radius: 10px;
 }
 
-#container wrap-hamberger-ven {
-  padding: 31px 27px 28px;
-}
+/* 자판기 리스트  */
 
-/* 햄버거 리스트 */
-.wrap-hamberger-vend .hamberger-list {
+.vending-wrap .vending-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
 }
 
-.wrap-hamberger-vend .hamberger-list li {
+.vending-wrap .vending-wrap li {
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-.wrap-hamberger-vend .hamberger-list li.sold-out {
-  pointer-events: none;
-}
-
-.wrap-hamberger-vend .hamberger-list li.sold-out::before {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: no-repeat center/60px 46px url(../images/Sold-out.png)
-    rgba(0, 0, 0, 0.8);
-}
-
-.wrap-hamberger-vend .hamberger-list .btn-item {
-  background-color: #fff;
-  border-radius: 10px;
-  border: none;
-  padding: 11px 12px 9px;
-}
-
-.wrap-hamberger-vend .hamberger-list .btn-item:active {
-  border-radius: 10px;
-  outline: 3px solid #6327fe;
-}
-
-.hamberger-list .btn-item .btn-price {
-  display: block;
-  padding: 5px 15px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #fff;
-  background-color: #6327fe;
-  border-radius: 50px;
-}
-
-.hamberger-list .btn-item .img-item {
-  width: 36px;
-  height: 65px;
-}
-
-.hamberger-list .btn-item .txt-item {
-  display: block;
-  margin: 6px 0 7px;
-}
-
-/* 햄버거 버튼 */
-
-.wrap-hamberger-vend .hamberger-list {
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-}
-
-.info-wrap {
+.vending-wrap .btn-item {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+  padding: 12px;
+  background-color: var(--btn-color);
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.vending-wrap .btn-item:hover {
+  border-radius: 10px;
+  outline: 3px solid var(--sub2-color);
+}
+
+.vending-wrap .btn-item:active {
+  border-radius: 10px;
+  outline: 3px solid var(--main-color);
+}
+
+.vending-wrap .list-item .img-item {
+  width: 80px;
+  margin: 0 auto;
+}
+
+.vending-wrap .txt-item {
+  display: block;
+  font-size: 9px;
+  line-height: 12px;
+  color: var(--sub-color);
+}
+
+.vending-wrap .txt-price {
+  display: block;
+  padding: 5px 13px;
+  font-size: 10px;
+  border: 1px solid var(--sub2-color);
+  border-radius: 50px;
+  color: var(--sub2-color);
+}
+
+/* 자판기 리스트 끝 */
+
+/* 잔액 및 입금 확인  */
+.vending-wrap .vending-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
   margin-top: 20px;
 }
 
-.info-wrap .input-money,
-.info-wrap .btn-money,
-.info-wrap .sub-btn,
-.info-wrap .take-my-hamberger,
-.info-wrap .hambuger-take-list {
-  font-size: 13px;
+.vending-info .change-money,
+.vending-info .input-money,
+.vending-info .list-item-sec {
+  grid-column: 1/3;
   border-radius: 5px;
 }
 
-.info-wrap .change-money {
-  padding: 6px 10px;
-  line-height: 20px;
-  color: var();
-  background-color: var(--main-color);
+.vending-info .btn-return,
+.vending-info .btn-put,
+.vending-info .btn-get {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(135, 123, 123, 0.4);
+  font-size: 13px;
 }
 
-.info-wrap .change-txt {
+.vending-info .change-money {
+  padding: 10px;
+  background-color: var(--sub2-color);
+  color: var(--btn-color);
+}
+
+.vending-info .change-money .change-txt,
+.info-wrap .show-my-money {
   float: right;
 }
 
-.info-wrap .input-money {
-  padding: 7px 6px;
+.vending-info .input-money {
+  padding: 6px;
+  border: 1px solid var(--main-color);
+}
+/* 잔액 및 입금 확인  */
+
+/* 획득 리스트 */
+.list-item-sec {
+  height: 125px;
+  padding: 12px;
+  overflow-y: scroll;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
 }
 
-.info-wrap .input-money::placeholder {
-  color: #bdbdbd;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
+.list-item-select li {
+  border: 1px solid var(--sub-color);
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.info-wrap .btn-money,
-.info-wrap .sub-btn,
-.info-wrap .take-my-hamberger {
-  border: none;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+.list-item-select li + li {
+  margin-top: 6px;
 }
 
-.info-wrap .take-my-hamberger {
+.list-item-select .img-item,
+.list-item-select .txt-item {
+  float: left;
+}
+
+.list-item-select .btn-select {
+  width: 100%;
+  padding: 8px;
+}
+
+.list-item-select .btn-select:hover {
+  outline: 2px solid var(--main-color);
+  border-radius: 5px;
+}
+
+.list-item-select .img-item {
+  width: 40px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.list-item-select .txt-item {
+  margin-left: 20px;
+  line-height: 40px;
+  font-size: 9px;
+  color: var(--sub3-color);
+}
+
+.list-item-select .count-num {
+  float: right;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--main-color);
+  border-radius: 6px;
+  color: var(--main-color);
+}
+
+.vending-info .btn-get,
+.vending-info .btn-return,
+.vending-info .btn-put {
   background-color: var(--btn-color);
-  color: #ffff;
+  color: var(--sub2-color);
+  font-weight: 500;
+  font-size: 13px;
 }
 
 /* 획득 리스트 */
 
-.hambuger-take-list {
-  height: 106px;
-  overflow-y: scroll;
-  padding: 12px;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-  background-color: #ffff;
+/*나의 정보 */
+
+#container .info-wrap {
+  padding: 25px 27px;
+  background-color: var(--sub-color);
+  border-radius: 10px;
 }
 
-.hambuger-take-list {
-  border-radius: 5px;
-  background-color: #fff;
+.info-wrap .moeny-wrap {
+  color: var(--btn-color);
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: var(--sub2-color);
+  border-radius: 10px;
 }
 
-.hambuger-take-list {
+.get-hamberger-wrap .show-my-money {
   margin-top: 6px;
 }
 
-.hambuger-take-list button {
-  border: 1px solid #bdbdbd;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 6px 10px;
-  width: 100%;
-}
-
-.hambuger-take-list .img-item,
-.hambuger-take-list .txt-item {
-  float: left;
-}
-
-.hambuger-take-list .img-item {
-  width: 18px;
-  height: 33px;
-}
-.hambuger-take-list .txt-item {
-  margin-left: 10px;
-  line-height: 33px;
-}
-
-.hambuger-take-list .num-counter {
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #bdbdbd;
-  width: 30px;
-  height: 30px;
-  line-height: 14px;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-.hambuger-take-list::-webkit-scrollbar {
-  width: 12px;
-  background-color: var(--main-color);
-}
-
-.hambuger-take-list::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 50px;
-  background-clip: padding-box;
-}
-#container .my-info-wrap {
-  background-color: transparent;
-}
-
-.my-info-wrap .moeny-wrap {
-  padding: 9px 27px;
-  background-color: #ffff;
-}
-
-.moeny-wrap .money-wrap-tit {
-  padding: 6px 10px;
-  background-color: var(--main-color);
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.money-wrap-tit #money {
-  float: right;
-  font-weight: 700;
-}
-
-.get-hamberger-wrap {
-  margin-top: 20px;
-  background-color: #fff;
-  padding: 25px 27px;
-}
 .get-hamberger-wrap .tit-get-hamberger {
-  display: block;
-  font-size: 14px;
-  font-weight: 700px;
-  line-height: 20px;
   text-align: center;
   margin-bottom: 13px;
 }
 
-.get-hamberger-wrap .hambuger-take-list {
-  height: 370px;
-}
-.get-hamberger-wrap .total-pri {
-  display: block;
-  margin-top: 6px;
-  text-align: right;
-  font-size: 12px;
-  line-height: 17px;
-  float: right;
-}
+/*나의 정보 */

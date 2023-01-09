@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/index.css" />
     <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>mcdonalds Machine</title>
   </head>
   <body>
@@ -15,18 +21,18 @@
       </h1>
 
       <!--햄버거 자판기 -->
-      <section class="wrap-hamberger-vend">
+      <section class="vending-wrap">
         <h2 class="ir">자판기</h2>
         <ul class="hamberger-list"></ul>
 
-        <!--햄버거 벤딩 버튼-->
-        <section class="info-wrap">
+        <!--햄버거 구입정보 -->
+        <section class="vending-info">
           <h3 class="ir">구입관련정보</h3>
           <div class="change-money">
             잔액 :
             <span class="change-txt">0 원</span>
           </div>
-          <button type="button" class="btn-money">거스름돈 반환</button>
+          <button class="btn-return" type="button">거스름돈 반환</button>
           <label for="inpMoney" class="ir">금액 입력</label>
           <input
             type="text"
@@ -34,14 +40,16 @@
             class="input-money"
             placeholder="입금액 입력"
           />
-          <button type="button" class="sub-btn">입금</button>
-          <ul class="hambuger-take-list"></ul>
-          <button class="take-my-hamberger" type="button">획득</button>
+          <button type="button" class="btn-put">입금</button>
+          <ul class="list-item-sec"></ul>
+          <button class="btn-get" type="button">획득</button>
         </section>
+        <!--햄버거 구입정보 -->
       </section>
+      <!--햄버거 자판기 -->
 
       <!--내 정보-->
-      <section class="my-info-wrap">
+      <section class="info-wrap">
         <h2 class="ir">음료 획득 정보</h2>
         <div class="moeny-wrap">
           <div class="money-wrap-tit">
@@ -54,11 +62,14 @@
           <div class="tit-get-hamberger">
             <strong>획득한 음료</strong>
           </div>
-          <ul class="hambuger-take-list"></ul>
-          <strong class="total-pri">총금액 : 0원</strong>
+          <ul class="list-item-sec"></ul>
+          <div class="show-my-money">
+            총금액 :
+            <span class="txt-mymoney">500,000 원</span>
+          </div>
         </section>
       </section>
+      <!--내 정보-->
     </article>
-    <script type="module" src="/src/js/app.js"></script>
   </body>
 </html>
