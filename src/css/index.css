@@ -217,7 +217,7 @@ body {
 .vending-info .btn-return,
 .vending-info .btn-put {
   background-color: var(--btn-color);
-  color: var(--sub2-color);
+  color: var(--main-color);
   font-weight: 500;
   font-size: 13px;
 }
@@ -237,7 +237,7 @@ body {
   margin: 0 auto;
   padding: 5px 10px;
   margin-bottom: 20px;
-  background-color: var(--sub-color);
+  background-color: var(--sub2-color);
   border-radius: 10px;
 }
 
@@ -252,7 +252,6 @@ body {
   color: var(--btn-color);
   padding: 10px;
   margin-bottom: 20px;
-  background-color: var(--sub2-color);
   border-radius: 10px;
 }
 
