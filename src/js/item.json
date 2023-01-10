@@ -19,13 +19,13 @@
   },
   {
     "name": "Bigmac",
-    "cost": 4000,
+    "cost": 4500,
     "img": "Bigmac.jpg",
     "count": 10
   },
   {
     "name": "lucky",
-    "cost": 3500,
+    "cost": 4000,
     "img": "lucky.jpg",
     "count": 5
   },
@@ -36,14 +36,14 @@
     "count": 10
   },
   {
-    "name": "dobbleCheeze.jpg",
-    "cost": 3500,
+    "name": "dobbleCheeze",
+    "cost": 5500,
     "img": "dobbleCheeze.jpg",
     "count": 10
   },
   {
     "name": "shrimp",
-    "cost": 4500,
+    "cost": 5500,
     "img": "shrimp.jpg",
     "count": 10
   },
