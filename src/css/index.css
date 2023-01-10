@@ -56,13 +56,13 @@ body {
 
 /* 자판기 리스트  */
 
-.vending-wrap .vending-wrap {
+.vending-wrap .list-item {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
 }
 
-.vending-wrap .vending-wrap li {
+.vending-wrap .list-item li {
   position: relative;
 }
 

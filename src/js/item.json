@@ -1,38 +1,56 @@
 [
   {
-    "name": "BulgogiBurger",
-    "cost": 1000,
-    "img": "BulgogiBurger.jpg",
+    "name": "1955",
+    "cost": 6000,
+    "img": "1955.jpg",
     "count": 10
   },
   {
-    "name": "CheezBuger",
-    "cost": 1000,
-    "img": "CheezBuger.jpg",
+    "name": "BaconTomato",
+    "cost": 5500,
+    "img": "BaconTomato.jpg",
     "count": 10
   },
   {
-    "name": "MacSpicyBuger",
-    "cost": 1000,
-    "img": "MacSpicyBuger.jpg",
+    "name": "MacSpicy",
+    "cost": 5000,
+    "img": "MacSpicy.jpg",
     "count": 10
   },
   {
-    "name": "BaconTomatoBuger",
-    "cost": 1000,
-    "img": "BaconTomatoBuger.jpg",
+    "name": "Bigmac",
+    "cost": 4000,
+    "img": "Bigmac.jpg",
     "count": 10
   },
   {
-    "name": "subiBuger.jpg",
+    "name": "lucky",
     "cost": 3500,
-    "img": "subiBuger.jpg",
+    "img": "lucky.jpg",
+    "count": 5
+  },
+  {
+    "name": "macChiken",
+    "cost": 4500,
+    "img": "macChiken.jpg",
     "count": 10
   },
   {
-    "name": "MacMorninBuger",
+    "name": "dobbleCheeze.jpg",
+    "cost": 3500,
+    "img": "dobbleCheeze.jpg",
+    "count": 10
+  },
+  {
+    "name": "shrimp",
     "cost": 4500,
-    "img": "MacMorninBuger.jpg",
+    "img": "shrimp.jpg",
+    "count": 10
+  },
+  {
+    "name": "shrimpBeaf",
+    "cost": 6000,
+    "img": "shrimpBeaf.jpg",
     "count": 10
   }
 ]
