@@ -10,7 +10,7 @@ class ItemGenerator {
   }
 
   async loadDate(callback) {
-    const response = await fetch("src/js/item.json");
+    const response = await fetch("./src/js/item.json");
 
     if (response.ok) {
       callback(await response.json());
